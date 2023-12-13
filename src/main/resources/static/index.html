@@ -169,7 +169,7 @@
             methods: {
                 login() {
                     this.logining = true;
-                    var socket = new SockJS(`http://localhost:8080/im?username=${this.username}&password=${this.password}`);
+                    var socket = new SockJS(`http://localhost:8081/im?username=${this.username}&password=${this.password}`);
                     this.stompClient = Stomp.over(socket);
                     this.stompClient.connect({}, this.loginSuccess, this.loginFail);
                 },
